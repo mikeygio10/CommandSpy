@@ -25,7 +25,7 @@ class Main extends PluginBase {
 		 	if($sender instanceof Player) {
 				if($sender->hasPermission("commandspy.cmd")) {
 					if(!isset($this->snoopers[$sender->getName()])) {
-						$sender->sendMessage("§aDu bist nun im Spy-Mode.");
+						$sender->sendMessage("§8cspy is now §aOn");
 						$this->snoopers[$sender->getName()] = $sender;
 						return true;
 					} else {
@@ -34,7 +34,7 @@ class Main extends PluginBase {
 						return true;
 						}
 				} else {
-       						$sender->sendMessage("§cDu kannst diesen Befehl nicht ausführen!");
+       						$sender->sendMessage("§8cspy is now §cOff");
        						return true;
 					}
 				}
