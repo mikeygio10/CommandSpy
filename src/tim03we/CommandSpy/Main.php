@@ -25,16 +25,16 @@ class Main extends PluginBase {
 		 	if($sender instanceof Player) {
 				if($sender->hasPermission("commandspy.cmd")) {
 					if(!isset($this->snoopers[$sender->getName()])) {
-						$sender->sendMessage("§aDu bist nun im Spy-Mode.");
+						$sender->sendMessage("§1[§8CommandSpy§1]§1 On");
 						$this->snoopers[$sender->getName()] = $sender;
 						return true;
 					} else {
-						$sender->sendMessage("§cDu hast den Spy-Mode verlassen.");
+						$sender->sendMessage("§1[§8CommandSpy§1]§1 Off");
 						unset($this->snoopers[$sender->getName()]);
 						return true;
 						}
 				} else {
-       						$sender->sendMessage("§cDu kannst diesen Befehl nicht ausführen!");
+       						$sender->sendMessage("§cYou do not have permisiom to run this command.");
        						return true;
 					}
 				}
